@@ -8,6 +8,7 @@ public class MovimientoNave : MonoBehaviour
     public Rigidbody2D rb;
     float move;
     Vector2 starPosition;
+    
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class MovimientoNave : MonoBehaviour
     void Update()
     {
             move = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(Time.deltaTime * Mathf.SmoothDamp(move * speed), rb.velocity.y );
+            rb.velocity = new Vector2(Time.deltaTime * (move * speed), rb.velocity.y );
+            rb.AddForce(Vector2.right);
     }
     public void Reset()
     {
