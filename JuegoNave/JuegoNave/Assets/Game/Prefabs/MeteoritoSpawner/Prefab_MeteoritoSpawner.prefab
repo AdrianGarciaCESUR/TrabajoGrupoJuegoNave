@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4595040542571911021}
   - component: {fileID: 964214371248513957}
+  - component: {fileID: 996511839499190947}
   m_Layer: 0
   m_Name: Prefab_MeteoritoSpawner
   m_TagString: Untagged
@@ -77,3 +78,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 17, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &996511839499190947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041360837213291555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65baef92fad9c24e8271b1122f5c523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
