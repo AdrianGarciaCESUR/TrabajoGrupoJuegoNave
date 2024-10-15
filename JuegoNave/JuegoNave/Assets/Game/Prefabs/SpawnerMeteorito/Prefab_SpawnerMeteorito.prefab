@@ -90,3 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65baef92fad9c24e8271b1122f5c523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Prefab_Meteorito: {fileID: 927583875156535394, guid: 49ca749295f474a49acc70faa2728936, type: 3}
