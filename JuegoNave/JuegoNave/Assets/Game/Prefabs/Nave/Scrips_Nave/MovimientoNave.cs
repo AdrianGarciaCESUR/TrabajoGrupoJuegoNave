@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovimientoNave : MonoBehaviour
 {
     public float speed = 3f;
-    public Rigidbody2D rb;
-    float move;
+    public Rigidbody2D _rb;
+    float _move;
     Vector2 starPosition;
 
 
@@ -18,8 +18,8 @@ public class MovimientoNave : MonoBehaviour
 
     void Update()
     {
-            move = Input.GetAxisRaw("Horizontal_suave");
-            rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
+            _move = Input.GetAxisRaw("Horizontal_suave");
+            _rb.velocity = new Vector2(_move * speed * Time.deltaTime, _rb.velocity.y);
     }
     public void Reset()
     {
