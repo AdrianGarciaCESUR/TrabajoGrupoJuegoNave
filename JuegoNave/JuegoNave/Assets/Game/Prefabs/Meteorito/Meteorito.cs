@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Meteorito : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public float speed = 1f;
+    public Rigidbody2D rb;
+
+    private Vector2 move;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
-        
+        move.y = speed * Time.deltaTime;
+        rb.velocity = move;
     }
+
+
+
+
 }
