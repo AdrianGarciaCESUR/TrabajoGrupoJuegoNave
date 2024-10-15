@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4595040542571911021}
   - component: {fileID: 964214371248513957}
   m_Layer: 0
-  m_Name: MeteoritoSpawner
+  m_Name: Prefab_MeteoritoSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,5 +75,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.68, y: 0.1}
+  m_Size: {x: 17, y: 0.1}
   m_EdgeRadius: 0
