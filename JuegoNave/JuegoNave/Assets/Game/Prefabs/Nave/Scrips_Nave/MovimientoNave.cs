@@ -30,19 +30,7 @@ public class MovimientoNave : MonoBehaviour
         //_rb.velocity = new Vector2(_move * speed * Time.deltaTime, _rb.velocity.y);
         
         
-        if (Input.GetAxisRaw("Horizontal_suave") == 1 && _rb.velocity != Vector2.zero)
-        {
-            _rb.AddForce(-fuerzaOpo, ForceMode2D.Impulse);
-        }
-        else if(Input.GetAxisRaw("Horizontal_suave") == -1 && _rb.velocity != Vector2.zero)
-        {
-            _rb.AddForce(fuerzaOpo, ForceMode2D.Impulse);
-        }
-        else if(Input.GetAxisRaw("Horizontal_suave") == 0)
-        {
-            _rb.AddForce(fuerza , ForceMode2D.Impulse);
-            _rb.AddForce(-fuerza , ForceMode2D.Impulse);
-        }
+       
     }
     public void Reset()
     {
