@@ -29,6 +29,7 @@ public class Meteorito : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             this.gameObject.SetActive(false);
+            //Aqui explota el meteoro
         }
     }
 }

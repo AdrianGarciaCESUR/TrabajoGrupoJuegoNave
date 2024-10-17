@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerNave : MonoBehaviour
 {
+    public GameObject game_manager;
     public float speed = 3f;
     public float desaceleracion = 3f;
     public Rigidbody2D _rb;
@@ -11,7 +12,6 @@ public class PlayerNave : MonoBehaviour
     Vector2 starPosition;
     Vector2 fuerza;
     Vector2 fuerzaOpo;
-    bool seMueve = false;
 
     void Start()
     {
@@ -41,7 +41,9 @@ public class PlayerNave : MonoBehaviour
     {
         if (collision.CompareTag("Meteorito"))
         {
+            //Aqui muere el jugador
             this.gameObject.SetActive(false);
+            game_manager.GetComponent<GameManager>().OnPlayerDeath();
         }
     }
 

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDeath()
     {
-        spawner_meteorito.SetActive(false);
+        spawner_meteorito.GetComponent<SpawnerMeteorito>().is_enable = false;
     }
 
 }

@@ -17,9 +17,16 @@ public class SpawnerMeteorito : MonoBehaviour
     private void Start()
     {
         spawnBounds = GetComponent<BoxCollider2D>().bounds;
-        if (is_enable)
+        InvokeRepeating("_spawnMeteorito", startTime, delay);
+
+    }
+
+
+    private void Update()
+    {
+        if (!is_enable)
         {
-            InvokeRepeating("_spawnMeteorito", startTime, delay);
+            CancelInvoke();
         }
     }
 
