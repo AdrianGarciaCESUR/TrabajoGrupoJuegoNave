@@ -8,13 +8,19 @@ public class SpawnerMeteorito : MonoBehaviour
 
     public float startTime = 1f;
     public float delay = 1f;
+
+    public bool is_enable = true;
+
     public Transform Prefab_Meteorito;
     private Bounds spawnBounds;
 
     private void Start()
     {
         spawnBounds = GetComponent<BoxCollider2D>().bounds;
-        InvokeRepeating("_spawnMeteorito", startTime, delay);
+        if (is_enable)
+        {
+            InvokeRepeating("_spawnMeteorito", startTime, delay);
+        }
     }
 
 
