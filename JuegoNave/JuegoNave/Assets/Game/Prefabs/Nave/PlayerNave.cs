@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoNave : MonoBehaviour
+public class PlayerNave : MonoBehaviour
 {
     public float speed = 3f;
     public float desaceleracion = 3f;
