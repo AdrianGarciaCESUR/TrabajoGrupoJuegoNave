@@ -6,8 +6,11 @@ using UnityEngine;
 public class SpawnerMeteorito : MonoBehaviour
 {
 
-    public int startTime = 1;
-    public int delay = 1;
+    public float startTime = 1f;
+    public float delay = 1f;
+
+    public bool is_enable = true;
+
     public Transform Prefab_Meteorito;
     private Bounds spawnBounds;
 
@@ -15,6 +18,16 @@ public class SpawnerMeteorito : MonoBehaviour
     {
         spawnBounds = GetComponent<BoxCollider2D>().bounds;
         InvokeRepeating("_spawnMeteorito", startTime, delay);
+
+    }
+
+
+    private void Update()
+    {
+        if (!is_enable)
+        {
+            CancelInvoke();
+        }
     }
 
 

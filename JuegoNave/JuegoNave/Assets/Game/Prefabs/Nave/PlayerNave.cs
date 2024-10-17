@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoNave : MonoBehaviour
+public class PlayerNave : MonoBehaviour
 {
+    public GameObject game_manager;
     public float speed = 3f;
     public float desaceleracion = 3f;
     public Rigidbody2D _rb;
@@ -11,7 +12,6 @@ public class MovimientoNave : MonoBehaviour
     Vector2 starPosition;
     Vector2 fuerza;
     Vector2 fuerzaOpo;
-    bool seMueve = false;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class MovimientoNave : MonoBehaviour
     void Update()
     {
         _move = Input.GetAxisRaw("Horizontal_suave");
-        fuerza = new Vector2(_move * speed * Time.deltaTime, 0);//uhoiirewuhoi
+        fuerza = new Vector2(_move * speed * Time.deltaTime, 0); //uhoiirewuhoi
         fuerzaOpo = new Vector2(1 * desaceleracion * Time.deltaTime, 0);
 
         _rb.AddForce(fuerza, ForceMode2D.Impulse);
@@ -36,4 +36,15 @@ public class MovimientoNave : MonoBehaviour
     {
         transform.position = starPosition;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Meteorito"))
+        {
+            //Aqui muere el jugador
+            this.gameObject.SetActive(false);
+            game_manager.GetComponent<GameManager>().OnPlayerDeath();
+        }
+    }
+
 }

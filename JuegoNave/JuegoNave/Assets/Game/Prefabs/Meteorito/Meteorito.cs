@@ -24,4 +24,12 @@ public class Meteorito : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            this.gameObject.SetActive(false);
+            //Aqui explota el meteoro
+        }
+    }
 }
