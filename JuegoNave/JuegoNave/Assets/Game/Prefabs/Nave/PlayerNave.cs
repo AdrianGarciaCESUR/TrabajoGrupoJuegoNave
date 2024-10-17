@@ -13,6 +13,7 @@ public class PlayerNave : MonoBehaviour
     Vector2 fuerza;
     Vector2 fuerzaOpo;
 
+
     void Start()
     {
         starPosition = transform.position;
