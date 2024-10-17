@@ -7,14 +7,18 @@ using System;
 public class Temporizador : MonoBehaviour
 {
     [SerializeField] TMP_Text timerText;
-    
+
+    public GameObject game_manager;
+    public int rate = 3;
+
+
     float elapsedTime;
 
     int minutes;
     int seconds;
-    float miliseconds;
 
     bool is_timer_running = false;
+    bool is_just_entered = false;
 
     void Update()
     {
@@ -25,6 +29,16 @@ public class Temporizador : MonoBehaviour
 
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
+
+        if (seconds % rate == 0 && seconds != 0 && !is_just_entered)
+        {
+            is_just_entered = true;
+            game_manager.GetComponent<GameManager>().IncreaseMeteoritoSpawnFrequency();
+        }
+        else if (seconds % rate != 0)
+        {
+            is_just_entered = false;
+        }
         
     }
 
@@ -32,13 +46,11 @@ public class Temporizador : MonoBehaviour
     {
         minutes = Mathf.FloorToInt(f_elapsedTime / 60f);
         seconds = Mathf.FloorToInt(f_elapsedTime % 60f);
-        miliseconds = f_elapsedTime % 60f - seconds;
     }
 
     public void StopTimer()
     {
         is_timer_running = false;
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     public void StarTimer(int f_seconds = 0)
