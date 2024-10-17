@@ -2,19 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class Temporizador : MonoBehaviour
 {
-    //[SerializeField] TMP_Text timerText;
-    public GameObject textObject;
+    [SerializeField] TMP_Text timerText;
+    
     float elapsedTime;
+
+    int minutes;
+    int seconds;
+    float miliseconds;
+
+    bool is_timer_running = false;
 
     void Update()
     {
-        elapsedTime += Time.deltaTime;
-        int minutes = Mathf.FloorToInt(elapsedTime/60f);
-        int seconds = Mathf.FloorToInt(elapsedTime%60f);
+        if (is_timer_running)
+        {
+            elapsedTime += Time.deltaTime;
+            _Math_Time(elapsedTime);
 
-        textObject.GetComponent<TMP_Text>().text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        
     }
+
+    private void _Math_Time(float f_elapsedTime)
+    {
+        minutes = Mathf.FloorToInt(f_elapsedTime / 60f);
+        seconds = Mathf.FloorToInt(f_elapsedTime % 60f);
+        miliseconds = f_elapsedTime % 60f - seconds;
+    }
+
+    public void StopTimer()
+    {
+        is_timer_running = false;
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void StarTimer(int f_seconds = 0)
+    {
+        elapsedTime = f_seconds;
+        _Math_Time(elapsedTime);
+
+        is_timer_running = true;
+    }
+
+
+    
+
 }
