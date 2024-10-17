@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour
 {
 
-    public void playgame()
+    public void playgame(string name)
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(name);
         
     }
 
