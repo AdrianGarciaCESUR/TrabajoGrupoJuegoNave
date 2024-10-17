@@ -6,8 +6,8 @@ using UnityEngine;
 public class SpawnerMeteorito : MonoBehaviour
 {
 
-    public int startTime = 1;
-    public int delay = 1;
+    public float startTime = 1f;
+    public float delay = 1f;
     public Transform Prefab_Meteorito;
     private Bounds spawnBounds;
 

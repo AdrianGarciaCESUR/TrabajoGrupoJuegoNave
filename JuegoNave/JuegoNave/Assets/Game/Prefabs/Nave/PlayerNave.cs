@@ -22,7 +22,7 @@ public class PlayerNave : MonoBehaviour
     void Update()
     {
         _move = Input.GetAxisRaw("Horizontal_suave");
-        fuerza = new Vector2(_move * speed * Time.deltaTime, 0);//uhoiirewuhoi
+        fuerza = new Vector2(_move * speed * Time.deltaTime, 0); //uhoiirewuhoi
         fuerzaOpo = new Vector2(1 * desaceleracion * Time.deltaTime, 0);
 
         _rb.AddForce(fuerza, ForceMode2D.Impulse);
@@ -36,4 +36,13 @@ public class PlayerNave : MonoBehaviour
     {
         transform.position = starPosition;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Meteorito"))
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
 }
