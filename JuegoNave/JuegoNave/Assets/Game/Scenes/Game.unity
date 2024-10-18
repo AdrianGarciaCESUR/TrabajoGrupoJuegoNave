@@ -1303,14 +1303,30 @@ PrefabInstance:
     - target: {fileID: 1806721587051343984, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 580706823}
+    - target: {fileID: 1806721587051343984, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: abandonar
       objectReference: {fileID: 0}
     - target: {fileID: 2608183032813682582, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2608183032813682582, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 580706823}
+    - target: {fileID: 2608183032813682582, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: resumir
+      objectReference: {fileID: 0}
+    - target: {fileID: 9109028355920911269, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 580706823}
+    - target: {fileID: 9109028355920911269, guid: 1c79c105b962b1749b28aa3650cd91b9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: playgame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
