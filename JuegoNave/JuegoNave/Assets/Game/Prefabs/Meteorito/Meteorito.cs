@@ -5,6 +5,8 @@ using UnityEngine;
 public class Meteorito : MonoBehaviour
 {
 
+    public Transform meteorito_sprite;
+
     //public float gravity = 1f;
     public Rigidbody2D rb;
 
@@ -18,6 +20,9 @@ public class Meteorito : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        meteorito_sprite.Rotate(new Vector3(0f,0f,Time.deltaTime * 200f));
+
         if (transform.position.y < -15f)
         {
             Destroy(this.gameObject);
