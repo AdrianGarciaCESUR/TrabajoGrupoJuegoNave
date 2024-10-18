@@ -11,7 +11,7 @@ public class SpawnerMeteorito : MonoBehaviour
     public float delay_max = 1f;
     float delay = 1f;
 
-    float increase_speed = 0.9f;
+    float increase_speed = 0.85f;
 
     [Header("Bools")]
     public bool is_enable = true;
