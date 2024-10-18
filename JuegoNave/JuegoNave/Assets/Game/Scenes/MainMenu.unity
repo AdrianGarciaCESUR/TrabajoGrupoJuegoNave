@@ -391,6 +391,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 813059458672903195, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979439884785364716, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014137714667889104, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95bb9897221c69b49b6fdcf7ab442315, type: 3}
+    - target: {fileID: 3014137714667889104, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.60784316
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617777012902743323, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267380115251003698, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Name
+      value: background_RIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 5267380115251003698, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6242494388502795263, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -430,6 +458,18 @@ PrefabInstance:
     - target: {fileID: 6242494388502795263, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6955333897606109123, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 639c519fce5feea4dbeb216d4cd980d9, type: 3}
+    - target: {fileID: 8034153253434170499, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7213d2613e9bbea41ae3af452852c684, type: 3}
+    - target: {fileID: 8897214354388164988, guid: 66b91176385f20e4d8ac4524c6b945a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
