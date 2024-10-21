@@ -7,9 +7,11 @@ public class UI_Manager : MonoBehaviour
 {
     public GameObject menupausa;
     public bool esta_pausado = false;
+    public bool is_mainmenu = false;
 
     public void playgame(string name)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(name);
         
     }
@@ -22,7 +24,7 @@ public class UI_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !is_mainmenu)
         {
            resumir();
 
